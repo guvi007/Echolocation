@@ -24,6 +24,7 @@ public class SpawnObstacle : MonoBehaviour {
             objectPrefab.transform.localScale = new Vector3(objectPrefab.transform.localScale.x, Random.Range( 0.08f, 0.22f ) ,0);
 
 			timer = delayTimer;
+            Destroy(objectPrefab, 5f);
 		}
 	}
 }

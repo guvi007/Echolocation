@@ -40,7 +40,7 @@ public class DistanceandCollision : MonoBehaviour {
         {
             opacity = 0.1f;
         }
-        Debug.Log(opacity);
+        //Debug.Log(opacity);
         sr.color = new Color(1f, 1f, 1f, opacity);
         sr2.color = new Color(1f, 1f, 1f, opacity);
     }

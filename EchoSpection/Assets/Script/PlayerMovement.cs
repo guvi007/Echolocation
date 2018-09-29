@@ -15,15 +15,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		//Debug.Log (player.position.y);
-		/*
-		if (player.position.y > 0) {
-			player.AddForce (new Vector2(0,1f),ForceMode2D.Impulse );
-		} 
-		else if(player.position.y<0){
-			player.AddForce (new Vector2(0,-1f),ForceMode2D.Impulse );
-		}
-		*/
+
 		if (player.position.y > 0) {
 			pos.y += playerSpeed * Time.deltaTime/30;
 		}
@@ -37,11 +29,11 @@ public class PlayerMovement : MonoBehaviour {
 
 		if(Input.GetKey(KeyCode.DownArrow))
 		{
-			transform.Rotate(Vector3.back*Time.deltaTime*30f);
+			transform.Rotate(Vector3.back*Time.deltaTime*25f);
 		}
 		if(Input.GetKey(KeyCode.UpArrow))
 		{
-			transform.Rotate(Vector3.forward*Time.deltaTime*30f);
+			transform.Rotate(Vector3.forward*Time.deltaTime*25f);
 		}
 		pos.y += Input.GetAxis ("Vertical") * playerSpeed * Time.deltaTime;
 		if(pos.y>-4 && pos.y<4){
