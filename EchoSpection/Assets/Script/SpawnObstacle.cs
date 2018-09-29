@@ -12,7 +12,8 @@ public class SpawnObstacle : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		timer = delayTimer;
-	}
+        obstacle.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+    }
 
 	// Update is called once per frame
 	void Update () {
