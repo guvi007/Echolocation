@@ -9,10 +9,7 @@ public class DistanceandCollision : MonoBehaviour {
 	float opacity=0.1f;
 	public SpriteRenderer sr;
 	public SpriteRenderer sr2;
-	// Use this for initialization
-	void Start () {
 
-	}
 
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -22,19 +19,29 @@ public class DistanceandCollision : MonoBehaviour {
 		//Debug.Log(hit.transform.position.x);
 		if (hit.collider != null)
 		{
-			if (opacity>1){
-				opacity = 0.1f;
-			}
 			distance = hit.transform.position.x;
-			distance = distance + 7;
-			if (distance == -2) {
+			distance = distance + 8;
+			if (distance == -1)
+            {
 				opacity = 0.1f;
-			} else {
-				opacity = (20 - distance) / 20;
 			}
-			sr.color = new Color(1f, 1f, 1f, opacity);
-			sr2.color = new Color(1f, 1f, 1f, opacity);
-
+            else if(distance <= 0)
+            {
+                opacity = 1;
+            }
+            else
+            {
+				opacity = (21 - distance) / 21;
+                if (opacity < 0)
+                    opacity = 0;
+			}
 		}
-	}
+        else
+        {
+            opacity = 0.1f;
+        }
+        Debug.Log(opacity);
+        sr.color = new Color(1f, 1f, 1f, opacity);
+        sr2.color = new Color(1f, 1f, 1f, opacity);
+    }
 }
