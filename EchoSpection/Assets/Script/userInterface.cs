@@ -42,7 +42,6 @@ public class userInterface : MonoBehaviour {
     // Update is called once per frame
     public void Update()
     {
-        Debug.Log(scoreText);
         scoreText.text = "SCORE: " + Score.ToString();
         //Debug.Log(Score.ToString());
     }
