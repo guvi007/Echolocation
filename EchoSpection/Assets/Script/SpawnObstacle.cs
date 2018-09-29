@@ -7,7 +7,7 @@ public class SpawnObstacle : MonoBehaviour {
 	public GameObject obstacle;
 	public float delayTimer=3f;
 	float timer;
-    public GameObject objectPrefab;
+    GameObject objectPrefab;
 
 	// Use this for initialization
 	void Start () {
